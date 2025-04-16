@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Turtle Game Session</title>
+    <meta charset="UTF-8">
+    <script type="module" src="/src/gameSession.ts"></script>
+</head>
+
+<body class="bg-background">
+    <div class="max-w-6xl mx-auto p-8">
+        <header class="text-center mb-6">
+            <h1 id="game-title" class="text-4xl font-bold text-primary mb-2">Game Session</h1>
+        </header>
+
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-2/3 md:pr-6 md:border-r border-gray-200">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Players</h2>
+                    <div id="players-container" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Players will be populated here -->
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 md:pl-6 mt-6 md:mt-0">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Game Controls</h2>
+                    <div class="space-y-4">
+                        <button id="ready-btn"
+                            class="w-full px-4 py-2 bg-primary text-white rounded font-medium hover:bg-primary-hover transition-colors">Ready</button>
+                        <button id="leave-btn"
+                            class="w-full px-4 py-2 border border-gray-300 rounded hover:bg-gray-100 transition-colors">Leave
+                            Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-board" class="bg-white rounded-lg shadow-md p-6"></div>
+    </div>
+</body>
+
+</html>

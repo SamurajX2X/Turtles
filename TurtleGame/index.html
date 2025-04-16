@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Turtle Game Lobby</title>
+  <meta charset="UTF-8">
+  <!-- No direct CSS link needed as it's imported in main.ts -->
+  <script type="module" src="/src/main.ts"></script>
+</head>
+
+<body class="bg-background text-text">
+  <div class="max-w-6xl mx-auto p-8">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-primary mb-4">Create or Join Game</h1>
+    </header>
+
+    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+      <form id="create-game">
+        <div class="mb-6">
+          <label for="game-name" class="block mb-2 font-medium">Game name</label>
+          <input type="text" id="game-name" placeholder="Game name"
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+        </div>
+        <div class="mb-6">
+          <label for="player-name" class="block mb-2 font-medium">Your name</label>
+          <input type="text" id="player-name" placeholder="Your name"
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+        </div>
+        <button type="submit"
+          class="px-6 py-3 bg-primary text-white rounded font-medium hover:bg-primary-hover transition-colors">Create
+          Game</button>
+      </form>
+    </div>
+
+    <div id="active-games" class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-2xl font-bold text-primary mb-4">Active Games</h2>
+      <ul id="games-list" class="divide-y divide-gray-200"></ul>
+    </div>
+  </div>
+
+  <div id="join-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-md mx-4">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-bold text-primary">Join Game</h2>
+        <span class="close-modal text-2xl font-bold cursor-pointer hover:text-primary">&times;</span>
+      </div>
+      <form id="join-game-form">
+        <div class="mb-6">
+          <label for="join-name" class="block mb-2 font-medium">Your name</label>
+          <input type="text" id="join-name" required
+            class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary">
+        </div>
+        <button type="submit"
+          class="w-full px-6 py-3 bg-primary text-white rounded font-medium hover:bg-primary-hover transition-colors">Join</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
